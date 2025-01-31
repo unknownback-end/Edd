@@ -5,23 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca de Edd</title>
+    <!-- Favicon -->
+    <link rel="icon" href="icono.ico" type="image/png">
     <style>
         /* Estilos generales */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
             color: #333;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            position: relative;
+            overflow: auto;
+            /* Permitir scroll */
+        }
+
+        /* Video de fondo */
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            /* Para que esté detrás del contenido */
         }
 
         /* Encabezado */
         header {
-            background-color: #2c3e50;
+            background-color: rgba(44, 62, 80, 0.8);
+            /* Fondo semitransparente */
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            /* Para que esté sobre el video */
         }
 
         header h1 {
@@ -36,6 +55,8 @@
             display: flex;
             justify-content: center;
             margin: 30px 0;
+            position: relative;
+            /* Para que esté sobre el video */
         }
 
         #search-input {
@@ -76,10 +97,13 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            /* Para que esté sobre el video */
         }
 
         .video-item {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Fondo semitransparente */
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -119,11 +143,21 @@
             text-align: center;
             font-size: 18px;
             margin-top: 20px;
+            position: relative;
+            /* Para que esté sobre el video */
         }
     </style>
 </head>
 
 <body>
+    <!-- Video de fondo -->
+    <video id="video-background" autoplay muted loop>
+        <source
+            src="https://videocdn.cdnpk.net/joy/content/video/free/2014-12/large_preview/Raindrops_Videvo.mp4?token=exp=1738289068~acl=/*~hmac=a9f7eb03b307aa4c30cfe7b9e28af3690ef344f0bac25348326e2b2c7e8b208b"
+            type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+
     <header>
         <h1>Biblioteca de Edd</h1>
     </header>
